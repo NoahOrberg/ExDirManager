@@ -3,10 +3,11 @@ require '../src/command'
 
 class TestCommand < Test::Unit::TestCase
     def test_constructor
-        mode = "generate"
-        opts = ["Prog0", "-h", "Ex", "-f", "2", "-m", "13"]
-        cmd = Command.new(mode, opts)
-        assert_equal mode, cmd.mode
-        assert_equal opts, cmd.opts
+        cmd = Command.new("generate", "Prog0", "Ex", "2", "13")
+        assert_equal "generate", cmd.mode
+        assert_equal "Prog0", cmd.dir_name
+        assert_equal "Ex", cmd.header
+        assert_equal 2, cmd.max
+        assert_equal 13, cmd.digit
     end
 end
