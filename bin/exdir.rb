@@ -1,6 +1,6 @@
-require_relative 'command'
-require_relative 'command_parser'
-require_relative 'dir_repository'
+require_relative '../src/command'
+require_relative '../src/command_parser'
+require_relative '../src/dir_repository'
 
 class Main
     def initialize
