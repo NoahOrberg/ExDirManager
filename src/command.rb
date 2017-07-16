@@ -1,7 +1,10 @@
 class Command
-    attr_reader :mode, :opts
-    def initialize(mode, opts)
+    attr_reader :mode, :dir_name, :header, :max, :digit
+    def initialize(mode, dir_name, header, max, digit)
         @mode = mode
-        @opts = opts
+        @dir_name = dir_name
+        @header = header
+        @max = max.to_i
+        @digit = digit.to_i
     end
 end
