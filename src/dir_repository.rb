@@ -15,6 +15,9 @@ class DirRepository
     end
 
     def make
-        self.create_directories.map{|i| Dir.mkdir(i)}
+        Dir.mkdir(@dir_name)
+        self.create_directories.map{|i| Dir.mkdir("#{dir_name}/#{i}")}
     end
 end
+
+DirRepository.new("Prog1", "Ex", 12, 2).make
