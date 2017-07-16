@@ -1,23 +1,18 @@
 class DirRepository
-    attr_reader :dir_name, :header, :max, :digit
+    attr_reader :cmd
 
-    def initialize(dir_name, header, max, digit)
-        @dir_name = dir_name
-        @header = header
-        @max = max
-        @digit = digit
+    def initialize(cmd)
+        @cmd = cmd
     end
 
     def create_directories
-        (1..@max).to_a.map{|i|
-            sprintf("#{@header}%0#{@digit}d", i)
+        (1..@cmd.max).to_a.map{|i|
+            sprintf("#{@cmd.header}%0#{@cmd.digit}d", i)
         }
     end
 
     def make
-        Dir.mkdir(@dir_name)
-        self.create_directories.map{|i| Dir.mkdir("#{dir_name}/#{i}")}
+        Dir.mkdir(@cmd.dir_name)
+        self.create_directories.map{|i| Dir.mkdir("#{@cmd.dir_name}/#{i}")}
     end
 end
-
-DirRepository.new("Prog1", "Ex", 12, 2).make
