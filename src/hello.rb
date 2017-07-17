@@ -1,4 +1,3 @@
-
 class Hello
     def greeting
         "HelloWorld"
