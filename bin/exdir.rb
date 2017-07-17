@@ -1,3 +1,4 @@
+#!/usr/bin/ruby
 require_relative '../src/command'
 require_relative '../src/command_parser'
 require_relative '../src/dir_repository'
