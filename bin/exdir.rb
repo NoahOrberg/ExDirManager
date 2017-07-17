@@ -11,7 +11,13 @@ class Main
         when "generate" then
             dir.make
         else
-            p "nothing this command"
+            puts "ExDirManager - Extreme Directory Manager"
+            puts "usage: exdir.rb [commands] [options]"
+            puts "Commands:"
+            puts "   generate        Generate Directory"
+            puts "Options:"
+            puts "   -f num          Specify the number of digits as <num>"
+            puts "   -m max          Specify the number of directories as <max>"
         end
     end
 end
