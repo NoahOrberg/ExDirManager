@@ -16,6 +16,7 @@ class Main
             puts "Commands:"
             puts "   generate        Generate Directory"
             puts "Options:"
+            puts "   -h head         Specify the header of sub-directories as <head>"
             puts "   -f num          Specify the number of digits as <num>"
             puts "   -m max          Specify the number of directories as <max>"
         end
